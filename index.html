@@ -7,18 +7,28 @@
         background-color: black; /* or #000000 */
         color: white
         }
-        .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
         }
     </style>
     <title>EnVision EE Projects</title>
 </head>
 
 <h1>     </h1>
-<img src="envision_banner_logo.png" alt="EnVision Logo" width = "128" height = "250" class = "center"> 
+
+<div class="imgbox">
+    <img class="center-fit" src="envision_banner_logo.png">
+</div>
 
 <h1> EnVision EE Projects </h1>
 <p> test test hi</p>
