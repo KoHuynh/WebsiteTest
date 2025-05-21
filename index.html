@@ -14,6 +14,7 @@
         .imgbox {
             display: grid;
             height: 25%;
+            animation: fadeIn 5s;
         }
         .center-fit {
             max-width: 25%;
@@ -22,6 +23,10 @@
         }
         h1 {text-align: center;}
         p {text-align: center;}
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
     </style>
     <title>EnVision</title>
 </head>
