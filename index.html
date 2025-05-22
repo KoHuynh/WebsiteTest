@@ -118,6 +118,7 @@
         from {opacity: .4}
         to {opacity: 1}
         }
+        
     </style>
     <title>EnVision</title>
 </head>
@@ -132,26 +133,26 @@
 
 <p> ———————————————————————————————————————————————</p>
 
-<h1> &nbsp&nbsp&nbsp&nbsp </h1>
+<h1 style = "font-family:Brix Sans"> Click any image to find out more! </h1>
 
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="esp32assembly.png" style="width:100%">
+    <img src="esp32assembly.png" style="width:100%" usemap="#devboard">
     <div class="text">ESP32S3-Mini DevBoard</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="esp32lightshield.png" style="width:100%">
+    <img src="esp32lightshield.png" style="width:100%" usemap="#lightshield">
     <div class="text">VU-Meter + Light Shield</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="motion-pinout.png" style="width:100%">
+    <img src="motion-pinout.png" style="width:100%" usemap="#motionshield">
     <div class="text">EnVision DevBoard Motion Shield</div>
   </div>
 
@@ -167,6 +168,10 @@
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
+<map name="devboard">
+    <area target="" alt="" title="" href="DevBoard.html" coords="0,0,1623,1070" shape="rect">
+</map>
 
     <script>
         let slideIndex = 0;
