@@ -340,12 +340,12 @@
 
     <script>
         let slideIndex = 0;
-        showSlides();
-        let slides = document.getElementsByClassName("mySlides");
-        let captions = document.getElementsByClassName("caption");
+        
 
         function showSlides() {
         let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let captions = document.getElementsByClassName("caption");
         for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         if (captions[i]) captions[i].style.display = "none";
@@ -358,6 +358,9 @@
         if (captions[slideIndex-1]) captions[slideIndex-1].style.display = "block";
         setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
+        window.onload = function() {
+        showSlides();
+        };
     </script>
 
 
