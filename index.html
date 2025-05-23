@@ -241,24 +241,25 @@
         }
 
         :where(blockquote, div.blockquote) {
-        position: relative;
-        padding: 1.5rem 1.5rem 1.5rem 3rem; /* extra left padding for icon */
-        background: white;
-        margin: 1.5rem 0;
-        font-style: italic;
-        color: #333;
-        border-radius: 0.25rem;
-        z-index: 0;
+            position: relative;
+            padding: 0.5rem 1rem 0.5rem 2rem;
+            background: white;
+            margin: 0.5rem auto;
+            font-style: italic;
+            color: #333;
+            border-radius: 0.25rem;
+            z-index: 0;
         }
 
         blockquote {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 1rem auto 1rem auto; /* adds vertical spacing above and below */
+            margin: 1rem auto; /* LESS vertical space */
             background: transparent;
             border: none;
             max-width: fit-content;
+            padding: 0; /* Remove extra padding inside */
         }
 
         /* Border lines with golden color and angled cutout */
