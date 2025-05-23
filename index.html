@@ -88,6 +88,15 @@
         pointer-events: none;
         }
 
+        .corner-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;  /* Adjust to fit your icon */
+            height: 80px;
+            z-index: 3;
+        }
+
         /* Next & previous buttons */
         .prev, .next {
         cursor: pointer;
@@ -229,6 +238,63 @@
             z-index: 10;
         }
 
+        :where(blockquote, div.blockquote) {
+        position: relative;
+        padding: 1.5rem 1.5rem 1.5rem 3rem; /* extra left padding for icon */
+        background: white;
+        margin: 1.5rem 0;
+        font-style: italic;
+        color: #333;
+        border-radius: 0.25rem;
+        z-index: 0;
+        }
+
+        /* Border lines with golden color and angled cutout */
+        :where(blockquote, div.blockquote)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        box-sizing: border-box;
+        z-index: -1;
+
+        border: solid 0.12rem rgb(229, 214, 157);
+
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
+        }
+
+        /* Icon mask positioned top-left */
+        :where(blockquote, div.blockquote)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+
+        background-color: rgb(229, 214, 157);
+
+        /* Replace this with your icon mask */
+        -webkit-mask-image: var(--space-star-mask);
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+
+        mask-image: var(--space-star-mask);
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+
+        transform: translate(-50%, -42.5%);
+        }
+
+        :root {
+        --space-star-mask: url('star.svg');
+        }
+
     </style>
     <title>EnVision</title>
 </head>
@@ -265,6 +331,7 @@
 </div>
 
 <!--slideshow stuff--> 
+<blockquote>
 <div class="border-wrapper">
   
   
@@ -290,8 +357,9 @@
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-  <img src="imageborder.png" alt="Border Frame" class="border-image">
+  <!--<img src="imageborder.png" alt="Border Frame" class="border-image">-->
 </div>
+</blockquote>
 
 <br>
 
