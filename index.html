@@ -249,20 +249,22 @@
         color: #333;
         border-radius: 0.25rem;
         z-index: 0;
-        display: inline-block;  /* Add this */
         }
 
         blockquote {
-        position: relative;
-        display: block;
-        width: 600px;
-        margin: 30px auto;
-        padding: 1.5rem;
-        background: transparent;
-        font-style: italic;
-        color: #333;
-        border-radius: 0.25rem;
-        z-index: 0; /* don't let child elements escape this */
+            position: relative;
+            display: flex;
+            justify-content: center;  /* Center child horizontally */
+            align-items: center;      /* Optional: vertically center */
+            margin: 30px auto;
+            padding: 1.5rem;
+            background: transparent;
+            font-style: italic;
+            color: #333;
+            border-radius: 0.25rem;
+            z-index: 0;
+            width: 100%;  /* allow full width */
+            max-width: 700px; /* optional limit */
         }
 
         /* Border lines with golden color and angled cutout */
