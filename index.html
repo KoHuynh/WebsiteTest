@@ -252,19 +252,14 @@
         }
 
         blockquote {
-            position: relative;
             display: flex;
-            justify-content: center;  /* Center child horizontally */
-            align-items: center;      /* Optional: vertically center */
-            margin: 30px auto;
-            padding: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0;
             background: transparent;
-            font-style: italic;
-            color: #333;
-            border-radius: 0.25rem;
-            z-index: 0;
-            width: 100%;  /* allow full width */
-            max-width: 700px; /* optional limit */
+            border: none;
+            max-width: fit-content; /* Keeps it as small as needed */
         }
 
         /* Border lines with golden color and angled cutout */
@@ -320,8 +315,6 @@
             0 0 5px #fff,
             0 0 10px #fff,
             0 0 20px #e5d69d,
-            0 0 30px #e5d69d,
-            0 0 40px #ac9d86,
             0 0 50px #373f57;
         }
 
