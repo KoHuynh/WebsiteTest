@@ -312,6 +312,23 @@
         --space-star-mask: url('star.svg');
         }
 
+        .glow {
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #60516a86, 0 0 40px #0c0c0e, 0 0 50px #5c6983, 0 0 60px #ac9d86, 0 0 70px #373f57;
+        }
+        
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #60516a86, 0 0 40px #5c6983, 0 0 50px #ac9d86, 0 0 60px #373f57, 0 0 70px #0c0c0e, 0 0 80px #60516a86;
+        }
+        }
+
     </style>
     <title>EnVision</title>
 </head>
@@ -325,7 +342,7 @@
 </div>
 
 <div class="fade-in-text">
-  <h1 style = "font-family:ringBearer"> ToolS FoR &nbspImaginatioN </h1>
+  <h1 class = "glow" style = "font-family:ringBearer"> ToolS FoR &nbspImaginatioN </h1>
 </div>
 
 <hr style = "width: 750px; margin: auto;"/>
