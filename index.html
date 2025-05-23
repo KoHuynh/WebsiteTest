@@ -53,6 +53,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 0;
         }
 
         .slideshow-container {
@@ -62,6 +63,7 @@
         z-index: 2;
         overflow: hidden;
         border-radius: 12px;
+        z-index: 0;
         }
 
         .mySlides {
@@ -69,7 +71,7 @@
         width: 100%;
         height: 100%;
         display: none;
-        z-index: 2;
+        z-index: 0;
         }
 
         .mySlides img {
@@ -251,9 +253,16 @@
         }
 
         blockquote {
+        position: relative;
         display: block;
-        width: 600px;  /* same as .border-wrapper */
-        margin: 30px auto;  /* center block */
+        width: 600px;
+        margin: 30px auto;
+        padding: 1.5rem;
+        background: transparent;
+        font-style: italic;
+        color: #333;
+        border-radius: 0.25rem;
+        z-index: 0; /* don't let child elements escape this */
         }
 
         /* Border lines with golden color and angled cutout */
