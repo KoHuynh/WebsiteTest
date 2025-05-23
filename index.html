@@ -218,13 +218,15 @@
         }
 
         .caption {
-            position: relative;   
+            position: absolute;
+            bottom: 10px; /* distance from bottom of slide */
+            width: 100%;
             font-size: 16px;
             text-align: center;
             color: #f2f2f2;
-            margin-top: 8px;
-            margin-bottom: 8px;
-            z-index: 2;
+            background: rgba(0, 0, 0, 0.5); /* optional: translucent bg for readability */
+            padding: 5px 0;
+            z-index: 10;
         }
 
     </style>
