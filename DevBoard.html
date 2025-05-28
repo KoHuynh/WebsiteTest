@@ -104,7 +104,7 @@
         .sidenav {padding-top: 15px;}
         .sidenav a {font-size: 18px;}
         }
-        
+
         @keyframes fade {
         from {opacity: .4}
         to {opacity: 1}
@@ -138,5 +138,30 @@
   </div>
 </div>
 
+<script>
+    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<script>
+    let navOpen = true; // false = initially close d
+
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.width === "0px" || sidenav.style.width === "") {
+            sidenav.style.width = "200px";
+            navOpen = true;
+        } else {
+            sidenav.style.width = "0px";
+            navOpen = false;
+        }
+    }
+</script>
 
 </html> 
