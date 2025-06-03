@@ -350,6 +350,116 @@
 <h1> &nbsp&nbsp&nbsp&nbsp </h1>
 
 <div class="fade-in-text2">  
+<h1 style = "font-family:ringBearer"> click below to find out more </h1>
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class = "sidenav-links">
+  <a style = "font-family:ringBearer" href="index.html">home</a>
+  <a style = "font-family:ringBearer" href="#">microcontrollers</a>
+  <a style = "font-family:ringBearer" href="#">pcb design</a>
+  <a style = "font-family:ringBearer" href="#">circuits</a>
+  <a style = "font-family:ringBearer" href="#">contact us</a>
+  </div>
+</div>
+
+<!--slideshow stuff--> 
+<blockquote>
+<div class="border-wrapper">
+  
+  
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="esp32assembly.png" style="width:100%" usemap="#devboard">
+      <div class="caption">ESP32S3-Mini DevBoard</div>
+      </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="esp32lightshield.png" style="width:100%" usemap="#lightshield">
+      <div class="caption">VU-Meter + Light Shield</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="motionshieldpic.png" style="width:100%" usemap="#motionshield">
+      <div class="caption">EnVision DevBoard Motion Shield</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <!--<img src="imageborder.png" alt="Border Frame" class="border-image">-->
+</div>
+</blockquote>
+
+<br>
+
+<!-- dots for slideshow -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<script>
+    let navOpen = true; // false = initially close d
+
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.width === "0px" || sidenav.style.width === "") {
+            sidenav.style.width = "200px";
+            navOpen = true;
+        } else {
+            sidenav.style.width = "0px";
+            navOpen = false;
+        }
+    }
+</script>
+
+<map name="devboard">
+    <area target="" alt="" title="" href="DevBoard.html" coords="0,0,1623,1070" shape="rect">
+</map>
+
+    <script>
+        let slideIndex = 0;
+        
+
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let captions = document.getElementsByClassName("caption");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        if (captions[i]) captions[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+
+        slides[slideIndex-1].style.display = "block";
+        if (captions[slideIndex-1]) captions[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+        window.onload = function() {
+        showSlides();
+        };
+    </script>
+
+<div class="fade-in-text2">  
 <h1 style = "font-family:ringBearer"> looking for something specific? </h1>
 </div>
 
@@ -493,117 +603,6 @@
 </div>
 
 <h1> &nbsp&nbsp&nbsp&nbsp </h1>
-
-<div class="fade-in-text2">  
-<h1 style = "font-family:ringBearer"> click below to find out more </h1>
-</div>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class = "sidenav-links">
-  <a style = "font-family:ringBearer" href="index.html">home</a>
-  <a style = "font-family:ringBearer" href="#">microcontrollers</a>
-  <a style = "font-family:ringBearer" href="#">pcb design</a>
-  <a style = "font-family:ringBearer" href="#">circuits</a>
-  <a style = "font-family:ringBearer" href="#">contact us</a>
-  </div>
-</div>
-
-<!--slideshow stuff--> 
-<blockquote>
-<div class="border-wrapper">
-  
-  
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="esp32assembly.png" style="width:100%" usemap="#devboard">
-      <div class="caption">ESP32S3-Mini DevBoard</div>
-      </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="esp32lightshield.png" style="width:100%" usemap="#lightshield">
-      <div class="caption">VU-Meter + Light Shield</div>
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="motionshieldpic.png" style="width:100%" usemap="#motionshield">
-      <div class="caption">EnVision DevBoard Motion Shield</div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <!--<img src="imageborder.png" alt="Border Frame" class="border-image">-->
-</div>
-</blockquote>
-
-<br>
-
-<!-- dots for slideshow -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<script>
-    
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "200px";
-    }
-
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
-
-<script>
-    let navOpen = true; // false = initially close d
-
-    function toggleNav() {
-        const sidenav = document.getElementById("mySidenav");
-        if (sidenav.style.width === "0px" || sidenav.style.width === "") {
-            sidenav.style.width = "200px";
-            navOpen = true;
-        } else {
-            sidenav.style.width = "0px";
-            navOpen = false;
-        }
-    }
-</script>
-
-<map name="devboard">
-    <area target="" alt="" title="" href="DevBoard.html" coords="0,0,1623,1070" shape="rect">
-</map>
-
-    <script>
-        let slideIndex = 0;
-        
-
-        function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let captions = document.getElementsByClassName("caption");
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        if (captions[i]) captions[i].style.display = "none";
-        }
-
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-
-        slides[slideIndex-1].style.display = "block";
-        if (captions[slideIndex-1]) captions[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 5000); // Change image every 5 seconds
-        }
-        window.onload = function() {
-        showSlides();
-        };
-    </script>
-
 
 </body>
 
