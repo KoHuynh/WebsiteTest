@@ -351,7 +351,7 @@
 <style>
 .block-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 0.5rem 1rem;
   max-width: 800px;
   margin: 1rem auto;
@@ -365,7 +365,7 @@
   text-decoration: none;
   font-family: "ringBearer";
   color: white;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem 2rem;
   justify-items: center;
@@ -385,7 +385,8 @@
 .block-link blockquote {
   animation: fadeIn 0.8s ease forwards;
   opacity: 0;
-  width: 600px;        /* fixed width for uniformity */
+  width: 100%;     /* fill parent */
+  max-width: 300px;       /* fixed width for uniformity */
   height: 130px;       /* fixed height for uniformity */
   display: flex;
   align-items: center;
