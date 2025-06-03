@@ -350,15 +350,17 @@
   .block-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 80%;
-    margin: auto;
+    gap: 0.75rem;
+    max-width: 800px;
+    margin: 1rem auto;
   }
 
   .block-link {
     text-decoration: none;
+    font-family: "ringBearer";
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
+    color: white;
   }
 
   .block-link:hover {
@@ -366,10 +368,22 @@
   }
 
   .block-link blockquote {
+    width: 100%; /* uniform width within grid column */
+    height: 100px; /* uniform height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.25rem auto;
+    box-sizing: border-box;
+    color: white;
+    margin: 0.25rem auto;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .block-link:hover blockquote {
+    color: white;
     font-family: "ringBearer";
     border-color: #fff2b5;
     box-shadow: 0 0 10px rgba(229, 214, 157, 0.6);
