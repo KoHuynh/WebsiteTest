@@ -560,6 +560,24 @@
   transform: translate(-50%, -42.5%);
 }
 
+.corner-icon {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(229, 214, 157);
+  -webkit-mask-image: var(--icon-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: var(--icon-url);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  z-index: 3;
+}
+
 </style>
 
 <div class="block-grid">
@@ -567,18 +585,21 @@
   <a href="#" class="block-link">
     <blockquote>
       <div>circuit components</div>
+      <div class="corner-icon" style="--icon-url: url('star.svg');"></div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
     <blockquote>
       <div>soldering</div>
+      <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
     <blockquote>
       <div>circuit diagrams</div>
+      <div class="corner-icon" style="--icon-url: url('star.svg');"></div>
     </blockquote>
   </a>
 
@@ -591,6 +612,7 @@
   <a href="#" class="block-link">
     <blockquote>
       <div>arduino</div>
+      <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
   </a>
 
