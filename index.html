@@ -560,22 +560,33 @@
   transform: translate(-50%, -42.5%);
 }
 
+.block-link blockquote.has-bottom-icon::before {
+  clip-path: polygon(
+    2rem 0, 100% 0, 100% calc(100% - 2rem),
+    calc(100% - 2rem) 100%, 0 100%, 0 2rem, 2rem 2rem
+  );
+}
+
 .corner-icon {
   position: absolute;
-  bottom: 0.4rem;
-  right: 0.4rem;
+  bottom: 0;
+  right: 0;
   width: 2rem;
   height: 2rem;
   background-color: rgb(229, 214, 157);
+
   -webkit-mask-image: var(--icon-url);
   -webkit-mask-size: contain;
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
+
   mask-image: var(--icon-url);
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;
-  z-index: 3;
+
+  transform: translate(50%, 42.5%); /* mirror of top-left icon's translate */
+  z-index: 2;
 }
 
 </style>
@@ -583,21 +594,21 @@
 <div class="block-grid">
 
   <a href="#" class="block-link">
-    <blockquote>
+    <blockquote class = "has-bottom-icon">
       <div>circuit components</div>
       <div class="corner-icon" style="--icon-url: url('star.svg');"></div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+    <blockquote class = "has-bottom-icon">
       <div>soldering</div>
       <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+    <blockquote class = "has-bottom-icon">
       <div>circuit diagrams</div>
       <div class="corner-icon" style="--icon-url: url('star.svg');"></div>
     </blockquote>
@@ -610,7 +621,7 @@
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+    <blockquote class = "has-bottom-icon">
       <div>arduino</div>
       <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
