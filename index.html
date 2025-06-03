@@ -360,7 +360,15 @@
   text-decoration: none;
   font-family: "ringBearer";
   color: white;
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  min-height: 100vh; /* Ensure full screen height */
+  box-sizing: border-box;
   transition: transform 0.3s ease;
 }
 
@@ -379,7 +387,7 @@
   padding: 1rem;
   box-sizing: border-box;
   margin: 0;
-  font-style: italic;
+  font-style: normal;
   border-radius: 0.25rem;
   border: solid 0.12rem rgb(229, 214, 157);
   position: relative;
@@ -467,10 +475,13 @@
 
 </div>
 
+<h1> &nbsp&nbsp&nbsp&nbsp </h1>
+
 <div class="fade-in-text2">
+
+    
 <h1 style = "font-family:ringBearer"> click below to find out more </h1>
 </div>
-<h1> &nbsp&nbsp&nbsp&nbsp </h1>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
