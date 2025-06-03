@@ -348,46 +348,47 @@
 
 <style>
   .block-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    max-width: 800px;
-    margin: 1rem auto;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 800px;
+  margin: 1rem auto;
+}
 
-  .block-link {
-    text-decoration: none;
-    font-family: "ringBearer";
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    color: white;
-  }
+.block-link {
+  text-decoration: none;
+  font-family: "ringBearer";
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  width: 100%;
+}
 
-  .block-link:hover {
-    transform: scale(1.03);
-  }
+.block-link:hover {
+  transform: scale(1.03);
+}
 
-  .block-link blockquote {
-    width: 100%; /* uniform width within grid column */
-    height: 100px; /* uniform height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem;
-    margin: 0.25rem auto;
-    box-sizing: border-box;
-    color: white;
-    margin: 0.25rem auto;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
+.block-link blockquote {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 20px;
+  font-family: "ringBearer";
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .block-link:hover blockquote {
-    color: white;
-    font-family: "ringBearer";
-    border-color: #fff2b5;
-    box-shadow: 0 0 10px rgba(229, 214, 157, 0.6);
-  }
+.block-link:hover blockquote {
+  border-color: #fff2b5;
+  box-shadow: 0 0 10px rgba(229, 214, 157, 0.6);
+}
 </style>
 
 <div class="block-grid">
