@@ -530,15 +530,21 @@
 .block-link blockquote::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  box-sizing: border-box;
-  border: solid 0.12rem rgb(229, 214, 157);
- clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
-  z-index: -1;
+  bottom: 0;
+  right: 0;
+  width: var(--icon2-size, 2rem);
+  height: var(--icon2-size, 2rem);
+  background-color: var(--icon2-color, rgb(229, 214, 157));
+  -webkit-mask-image: var(--icon-bottom-right);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: var(--icon-bottom-right);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: translate(50%, 42.5%);
+  z-index: 2;
 }
 
 .block-link blockquote::after {
@@ -546,18 +552,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 2rem;
-  height: 2rem;
-  background-color: rgb(229, 214, 157);
-  -webkit-mask-image: var(--gallifrey2);
+  width: var(--icon-size, 2rem);
+  height: var(--icon-size, 2rem);
+  background-color: var(--icon-color, rgb(229, 214, 157));
+  -webkit-mask-image: var(--icon-top-left);
   -webkit-mask-size: contain;
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  mask-image: var(--gallifrey2);
+  mask-image: var(--icon-top-left);
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;
   transform: translate(-50%, -42.5%);
+  z-index: 2;
 }
 
 </style>
@@ -565,37 +572,53 @@
 <div class="block-grid">
 
   <a href="#" class="block-link">
-    <blockquote>
+    <blockquote style="
+    --icon-top-left: url('gallifrey2.svg');
+    ">
       <div>circuit components</div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+      <blockquote style="
+    --icon-top-left: url('gallifrey.svg');
+    --icon2-size: 2.5rem;
+    --icon-bottom-right: url('star.svg');
+  ">
       <div>soldering</div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+      <blockquote style="
+    --icon2-size: 2.5rem;
+    --icon-bottom-right: url('star.svg');
+  ">
       <div>circuit diagrams</div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+      <blockquote style="
+    --icon-top-left: url('gallifrey2.svg');
+  ">
       <div>tbd</div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+      <blockquote style="
+    --icon-top-left: url('star.svg');
+  ">
       <div>arduino</div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote>
+      <blockquote style="
+    --icon2-size: 2.5rem;
+    --icon-bottom-right: url('gallifrey2.svg');
+  ">
       <div>tbd</div>
     </blockquote>
   </a>
