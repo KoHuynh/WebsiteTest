@@ -574,12 +574,11 @@
 
 .corner-icon {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 2rem;
   height: 2rem;
-  transform: translate(-50%, -42.5%);
-  transform-origin: center;
+  transform: translate(50%, 50%);
   z-index: 2;
   pointer-events: none;
 }
@@ -588,23 +587,14 @@
   width: 100%;
   height: 100%;
   background-color: rgb(229, 214, 157);
-
-  -webkit-mask-image: var(--corner-icon);
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-
   mask-image: var(--corner-icon);
   -webkit-mask-image: var(--corner-icon);
   mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-position: center;
-  -webkit-mask-position: center;
   mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-
-  transform-origin: center;
-  transition: transform 0.3s ease;
+  -webkit-mask-position: center;
 }
 
 .block-link:hover .corner-icon-inner {
