@@ -437,30 +437,55 @@
     <area target="" alt="" title="" href="DevBoard.html" coords="0,0,1623,1070" shape="rect">
 </map>
 
-    <script>
-        let slideIndex = 0;
-        
+<script>
+  let slideIndex = 0;
+  let slideTimer;
 
-        function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let captions = document.getElementsByClassName("caption");
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        if (captions[i]) captions[i].style.display = "none";
-        }
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    let captions = document.getElementsByClassName("caption");
 
-        slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      if (captions[i]) captions[i].style.display = "none";
+    }
 
-        slides[slideIndex-1].style.display = "block";
-        if (captions[slideIndex-1]) captions[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 5000); // Change image every 5 seconds
-        }
-        window.onload = function() {
-        showSlides();
-        };
-    </script>
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+
+    slides[slideIndex - 1].style.display = "block";
+    if (captions[slideIndex - 1]) captions[slideIndex - 1].style.display = "block";
+
+    // Set next automatic slide
+    slideTimer = setTimeout(showSlides, 5000);
+  }
+
+  function plusSlides(n) {
+    clearTimeout(slideTimer); // Stop current auto timer
+    slideIndex += n;
+
+    let slides = document.getElementsByClassName("mySlides");
+    if (slideIndex > slides.length) slideIndex = 1;
+    if (slideIndex < 1) slideIndex = slides.length;
+
+    // Show the updated slide
+    let captions = document.getElementsByClassName("caption");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      if (captions[i]) captions[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    if (captions[slideIndex - 1]) captions[slideIndex - 1].style.display = "block";
+
+    // Restart auto slideshow
+    slideTimer = setTimeout(showSlides, 5000);
+  }
+
+  window.onload = function () {
+    showSlides();
+  };
+</script>
 
 <div class="fade-in-text2">  
 <h1 style = "font-family:ringBearer"> looking for something specific? </h1>
