@@ -590,12 +590,21 @@
   mask-position: center;
   mask-repeat: no-repeat;
 
-  transform: translate(50%, 42.5%); /* mirror of top-left icon's translate */
+  transform: translate(50%, 42.5%); 
   z-index: 2;
 }
 
 .block-link:hover .corner-icon {
-  animation: rotateIcon 3s linear infinite;
+  animation: rotateIcon2 3s linear infinite;
+}
+
+@keyframes rotateIcon2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes rotateIcon {
