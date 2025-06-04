@@ -531,10 +531,6 @@
   animation: rotateIcon 3s linear infinite;
 }
 
-.block-link:hover .corner-icon {
-  animation: rotateIcon 3s linear infinite;
-}
-
 .block-link blockquote::before {
   content: "";
   position: absolute;
@@ -577,25 +573,37 @@
 
 .corner-icon {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
   width: 2rem;
   height: 2rem;
+  transform: translate(-50%, -42.5%);
+  transform-origin: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.corner-icon-inner {
+  width: 100%;
+  height: 100%;
   background-color: rgb(229, 214, 157);
 
-  -webkit-mask-image: var(--icon-url);
+  -webkit-mask-image: var(--corner-icon);
   -webkit-mask-size: contain;
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
 
-  mask-image: var(--icon-url);
+  mask-image: var(--corner-icon);
   mask-size: contain;
   mask-position: center;
   mask-repeat: no-repeat;
 
-  transform: translate(50%, 42.5%); /* mirror of top-left icon's translate */
-  transform-origin: center center;
-  z-index: 2;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.block-link:hover .corner-icon-inner {
+  animation: rotateIcon 3s linear infinite;
 }
 
 @keyframes rotateIcon {
@@ -612,23 +620,29 @@
 <div class="block-grid">
 
   <a href="#" class="block-link">
-    <blockquote class = "has-bottom-icon">
+    <blockquote style="--corner-icon: var(--gallifrey3);">
+                <span class = "corner-icon">
+        <span class = "corner-icon-inner"></span>
+        </span>
       <div>circuit components</div>
-      <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote class = "has-bottom-icon">
+    <blockquote style= "--corner-icon: var(--gallifrey3);">
+                <span class = "corner-icon">
+        <span class = "corner-icon-inner"></span>
+        </span>
       <div>soldering</div>
-      <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
   </a>
 
   <a href="#" class="block-link">
-    <blockquote class = "has-bottom-icon">
+    <blockquote style="--corner-icon: var(--gallifrey3);">
+        <span class = "corner-icon">
+        <span class = "corner-icon-inner"></span>
+        </span>
       <div>circuit diagrams</div>
-      <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
     </blockquote>
   </a>
 
@@ -639,9 +653,11 @@
   </a>
 
   <a href="#" class="block-link">
-    <blockquote class = "has-bottom-icon">
+    <blockquote style="--corner-icon: var(--gallifrey3);">
+                <span class = "corner-icon">
+        <span class = "corner-icon-inner"></span>
+        </span>
       <div>arduino</div>
-      <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
   </a>
 
