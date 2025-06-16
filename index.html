@@ -491,7 +491,11 @@
 <h1 style = "font-family:ringBearer"> looking for something specific? </h1>
 </div>
 
+
+<input type="text" id="searchBox" placeholder="Search box..." oninput="filterBlocks()" style="display:block; margin: 2rem auto; padding: 0.5rem 1rem; font-size: 1.2rem; width: 300px;">
 <style>
+
+  
 .block-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);  
@@ -503,6 +507,7 @@
 
 
 .block-link {
+  display: block;
     overflow: visible;
       animation: fadeIn 5s ease forwards;
   opacity: 0;
@@ -708,6 +713,22 @@
 </div>
 
 <h1> &nbsp&nbsp&nbsp&nbsp </h1>
+
+<script>
+function filterBlocks() {
+  const input = document.getElementById("searchBox").value.toLowerCase();
+  const blocks = document.querySelectorAll(".block-link");
+
+  blocks.forEach(block => {
+    const text = block.textContent.toLowerCase();
+    if (text.includes(input)) {
+      block.style.display = "block";
+    } else {
+      block.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 
