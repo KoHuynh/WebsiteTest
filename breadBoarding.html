@@ -254,6 +254,13 @@
 
           transform: translate(-50%, -35%);
         }
+        
+        .image-quote-row {
+        display: flex;
+        justify-content: center;
+        gap: 2rem; /* space between the two */
+        flex-wrap: wrap; /* responsive stacking on smaller screens */
+        }
 
         p {
             font-family: Avenir;
@@ -352,8 +359,19 @@
 
 <div class = "fade-in-text4">
 <p>
-    <b><u>3) Middle Divider:</u></b> 
+    <b><u>3) Middle Divider/DIP Support:</u></b> The last section is the middle divider! It sits between the horizontal rows and stops any connections from continuing on from vertical column e, to 
+    vertical column f. The main purpose of this section is to provide a spot to place integrated circuit components, IC for short. See the images below for an example of this.
 </p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="middleDividerBreadboard.png" alt="horizontalRowsBreadboard" class="fit-image" />
+  </blockquote>
+  
+  <blockquote class="image-quote">
+    <img src="ICexample.png" alt="ICexample" class="fit-image" />
+  </blockquote>
 </div>
 
 <div id="mySidenav" class="sidenav">
