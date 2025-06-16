@@ -182,15 +182,20 @@
         }
 
         .image-quote {
-        display: block;
-        margin: 2rem auto;
-        padding: 0.25rem; /* tiny gap between image and border */
-        border: none;
-        background: transparent;
+        display: inline-block; /* shrink to fit the image exactly */
         position: relative;
-        width: fit-content;
-        line-height: 0;
+        margin: 2rem auto;
+        padding: 0.5rem; /* space for border */
+        border: solid 2px rgb(229, 214, 157); /* golden border */
+        border-radius: 0.25rem;
+        background: rgba(255, 255, 255, 0.05); /* slight background if needed */
         text-align: center;
+        }
+
+        .fit-image {
+        max-width: 300px;  /* or any preferred fixed width */
+        height: auto;
+        display: block;
         }
 
         .image-quote img.fit-image {
@@ -233,10 +238,6 @@
         mask-repeat: no-repeat;
 
         transform: translate(-50%, -42.5%);
-        }
-        .fit-image {
-        width: 40%;  
-        height: auto;
         }
 
     </style>
