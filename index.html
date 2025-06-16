@@ -757,17 +757,22 @@ function filterBlocks() {
   const input = document.getElementById("searchBox").value.toLowerCase();
   const blocks = document.querySelectorAll(".block-link");
 
+  const shouldShowAll = input.trim() === "";
+
   blocks.forEach(block => {
     const text = block.textContent.toLowerCase();
 
-    // Always reset the animation for all blocks
-    block.classList.remove("fade-in");
-    void block.offsetWidth; // Trigger reflow
-    block.classList.add("fade-in");
+    const matches = text.includes(input);
+    const shouldShow = shouldShowAll || matches;
 
-    // Show or hide based on input
-    if (text.includes(input)) {
+    if (shouldShow) {
+      // Always re-show the element
       block.style.display = "block";
+
+      // Force reflow to restart animation
+      block.classList.remove("fade-in");
+      void block.offsetWidth;
+      block.classList.add("fade-in");
     } else {
       block.style.display = "none";
     }
