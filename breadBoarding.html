@@ -182,13 +182,15 @@
         }
 
         .image-quote {
-        display: inline-block;
+        display: block;                /* Allow it to behave like a block-level element */
+        margin: 2rem auto;             /* Center horizontally */
         padding: 0;
-        margin: 2rem auto;
         border: none;
         background: transparent;
         position: relative;
-        line-height: 0; /* eliminate space below img */
+        width: fit-content;            /* Shrink to fit image */
+        line-height: 0;                /* Eliminate extra line spacing */
+        text-align: center;           /* In case content inside needs alignment */
         }
 
         .image-quote img.fit-image {
