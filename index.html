@@ -397,9 +397,6 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class = "sidenav-links">
   <a style = "font-family:ringBearer" href="index.html">home</a>
-  <a style = "font-family:ringBearer" href="#">microcontrollers</a>
-  <a style = "font-family:ringBearer" href="#">pcb design</a>
-  <a style = "font-family:ringBearer" href="#">circuits</a>
   <a style = "font-family:ringBearer" href="#">contact us</a>
   </div>
 </div>
@@ -570,7 +567,6 @@
 }
 
 .block-link blockquote {
-  animation: fadeIn 5s ease forwards;
   opacity: 0;
   width: 100%;     /* fill parent */
   max-width: 300px;       /* fixed width for uniformity */
@@ -761,18 +757,18 @@ function filterBlocks() {
 
   blocks.forEach(block => {
     const text = block.textContent.toLowerCase();
-
     const matches = text.includes(input);
     const shouldShow = shouldShowAll || matches;
 
+    const quote = block.querySelector("blockquote");
+
     if (shouldShow) {
-      // Always re-show the element
       block.style.display = "block";
 
-      // Force reflow to restart animation
-      block.classList.remove("fade-in");
-      void block.offsetWidth;
-      block.classList.add("fade-in");
+      // Reset the fade-in animation on blockquote
+      quote.classList.remove("fade-in");
+      void quote.offsetWidth;
+      quote.classList.add("fade-in");
     } else {
       block.style.display = "none";
     }
