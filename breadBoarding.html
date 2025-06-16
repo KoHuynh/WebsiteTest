@@ -197,7 +197,7 @@
         .image-quote {
         display: block;
         position: relative;
-        margin: 2rem auto;
+        margin: 0;
         padding: 0.4rem;
         border-radius: 0.25rem;
         background: rgba(255, 255, 255, 0.03);
@@ -256,10 +256,10 @@
         }
 
         .image-quote-row {
-        display: flex;
-        justify-content: center;
-        gap: 10px; /* space between the two */
-        flex-wrap: wrap; /* responsive stacking on smaller screens */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 0.5rem; /* adjust this value to reduce spacing */
         }
 
         p {
@@ -368,9 +368,9 @@
   <blockquote class="image-quote">
     <img src="middleDividerBreadboard.png" alt="horizontalRowsBreadboard" class="fit-image" />
   </blockquote>
-  
+
   <blockquote class="image-quote">
-    <img src="ICexample.png" alt="ICexample" class="fit-image" />
+    <img src="ICexample.png" alt="horizontalRowsBreadboard" class="fit-image" />
   </blockquote>
 </div>
 
