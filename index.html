@@ -169,6 +169,16 @@
         animation-duration: 1.5s;
         }
 
+        .fade-in {
+          animation: fadeIn 0.8s ease forwards;
+          opacity: 0;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
         @keyframes fade {
         from {opacity: .4}
         to {opacity: 1}
@@ -678,59 +688,59 @@
 
 <div class="block-grid">
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>circuit components</div>
       <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>soldering</div>
       <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>circuit diagrams</div>
       <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
     </blockquote>
   </a>
 
-  <a href="breadBoarding.html" class="block-link">
+  <a href="breadBoarding.html" class="block-link fade-in">
     <blockquote>
       <div>breadboarding</div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>arduino</div>
       <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote>
       <div>projects</div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>ece classes</div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>ptest2</div>
     </blockquote>
   </a>
 
-  <a href="#" class="block-link">
+  <a href="#" class="block-link fade-in">
     <blockquote class = "has-bottom-icon">
       <div>ptest3</div>
     </blockquote>
@@ -753,12 +763,10 @@ function filterBlocks() {
     if (text.includes(input)) {
       block.style.display = "block";
 
-      // If input is cleared, retrigger animation
-      if (input === "") {
-        block.classList.remove("fade-in");
-        void block.offsetWidth; // Trigger reflow
-        block.classList.add("fade-in");
-      }
+      // Retrigger the fade-in animation every time it becomes visible
+      block.classList.remove("fade-in");
+      void block.offsetWidth; // Force reflow
+      block.classList.add("fade-in");
 
     } else {
       block.style.display = "none";
