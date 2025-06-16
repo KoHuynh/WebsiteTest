@@ -530,7 +530,7 @@
 </div>
 
 
-<input type="text" id="searchBox" placeholder="Search box..." oninput="filterBlocks()">
+<input type="text" id="searchBox" placeholder="search box..." oninput="filterBlocks()">
 <style>
 
   
@@ -760,14 +760,14 @@ function filterBlocks() {
   blocks.forEach(block => {
     const text = block.textContent.toLowerCase();
 
+    // Always reset the animation for all blocks
+    block.classList.remove("fade-in");
+    void block.offsetWidth; // Trigger reflow
+    block.classList.add("fade-in");
+
+    // Show or hide based on input
     if (text.includes(input)) {
       block.style.display = "block";
-
-      // Retrigger the fade-in animation every time it becomes visible
-      block.classList.remove("fade-in");
-      void block.offsetWidth; // Force reflow
-      block.classList.add("fade-in");
-
     } else {
       block.style.display = "none";
     }
