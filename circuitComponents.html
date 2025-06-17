@@ -60,6 +60,26 @@
         100% { opacity: 1; }
         }
 
+        .border-image {
+        position: absolute;
+        top: -25px;
+        left: -22.75px;
+        width: calc(100% + 48px);  
+        height: calc(100% + 46px); 
+        z-index: 3;
+        pointer-events: none;
+        }
+
+        .corner-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;  /* Adjust to fit your icon */
+            height: 80px;
+            z-index: 3;
+        }
+
+
         .glow {
         font-size: 80px;
         color: #fff;
@@ -270,6 +290,25 @@
             padding: 0 1rem; /* add some horizontal padding */
         }
 
+                .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        .fade-in {
+          animation: fadeIn 0.8s ease forwards;
+          opacity: 0;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
 
         #searchBox {
           background-color: transparent;
