@@ -270,6 +270,33 @@
             padding: 0 1rem; /* add some horizontal padding */
         }
 
+
+        #searchBox {
+          background-color: transparent;
+          border: 2px solid rgba(229, 214, 157, 0.6); /* soft gold border */
+          padding: 0.5rem 1rem;
+          font-family: "ringBearer", serif;
+          font-size: 1.1rem;
+          color: white;
+          border-radius: 0.25rem;
+          width: 100%;
+          max-width: 400px;
+          margin: 1rem auto;
+          display: block;
+          outline: none;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #searchBox::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+          font-family: "ringBearer", serif;
+        }
+
+        #searchBox:focus {
+          border-color: rgb(229, 214, 157);
+          box-shadow: 0 0 5px rgba(229, 214, 157, 0.7);
+        }
+
     </style>
     <title>circuitComponents</title>
   </head>
