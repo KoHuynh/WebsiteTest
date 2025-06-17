@@ -296,6 +296,305 @@
 </p>
 </div>
 
+<div class = "fade-in-text4">
+<p>
+    You can use the search box below if you're looking for a specific component, or, feel free to click on any of the boxes to jump straight to a circuit element! 
+</p>
+</div>
+
+
+<input type="text" id="searchBox" placeholder="search box..." oninput="filterBlocks()">
+<style>
+
+  
+.block-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: repeat(3, auto);    
+  gap: 0.5rem 1rem;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+
+.block-link {
+  display: block;
+    overflow: visible;
+  opacity: 0;
+    margin-top: 0.5rem;
+  text-decoration: none;
+  font-family: "ringBearer";
+  color: white;
+  display: block;
+  gap: 1rem 2rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+
+
+.block-link:hover {
+  transform: scale(1.03);
+}
+
+.block-link blockquote {
+  opacity: 1;
+  width: 100%;     /* fill parent */
+  max-width: 300px;       /* fixed width for uniformity */
+  height: 130px;       /* fixed height for uniformity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+  font-style: normal;
+  border-radius: 0.25rem;
+  position: relative;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: visible;     /* keep content contained */
+}
+
+.block-link:hover blockquote {
+  border-color: #fff2b5;
+  box-shadow: 0 0 10px rgba(229, 214, 157, 0.6);
+}
+
+.block-link:hover blockquote::after {
+  animation: rotateIcon 3s linear infinite;
+}
+
+.block-link blockquote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: solid 0.12rem rgb(229, 214, 157);
+ clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
+  z-index: -1;
+}
+
+.block-link blockquote::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(229, 214, 157);
+  -webkit-mask-image: var(--gallifrey2);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: var(--gallifrey2);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: translate(-50%, -42.5%);
+}
+
+.block-link blockquote.has-bottom-icon::before {
+  clip-path: polygon(
+    2rem 0, 100% 0, 100% calc(100% - 2rem),
+    calc(100% - 2rem) 100%, 0 100%, 0 2rem, 2rem 2rem
+  );
+}
+
+.corner-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(229, 214, 157);
+
+  -webkit-mask-image: var(--icon-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-image: var(--icon-url);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: translate(50%, 50%);
+  transform-origin: center; 
+  z-index: 2;
+}
+
+.block-link:hover .corner-icon {
+  animation: rotateIcon2 3s linear infinite;
+}
+
+@keyframes rotateIcon2 {
+  from {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: translate(-50%, -42.5%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -42.5%) rotate(360deg);
+  }
+}
+
+</style>
+
+<div class="block-grid">
+
+  <a href="#resistors" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>resistors</div>
+      <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
+    </blockquote>
+  </a>
+
+  <a href="#leds" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>leds</div>
+      <div class="corner-icon" style="--icon-url: url('gallifrey2.svg');"></div>
+    </blockquote>
+  </a>
+
+  <a href="#capacitors" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>capacitors</div>
+      <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
+    </blockquote>
+  </a>
+
+  <a href="#inductors" class="block-link fade-in">
+    <blockquote>
+      <div>inductors</div>
+    </blockquote>
+  </a>
+
+  <a href="#diodes" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>diodes</div>
+      <div class="corner-icon" style="--icon-url: url('gallifrey3.svg');"></div>
+    </blockquote>
+  </a>
+
+  <a href="#opamp" class="block-link fade-in">
+    <blockquote>
+      <div>operational amplifier</div>
+    </blockquote>
+  </a>
+
+  <a href="#bjt" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>bjt transistor</div>
+    </blockquote>
+  </a>
+
+  <a href="#mosfet" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>mosfet transistor</div>
+    </blockquote>
+  </a>
+
+  <a href="#" class="block-link fade-in">
+    <blockquote class = "has-bottom-icon">
+      <div>ptest3</div>
+    </blockquote>
+  </a>
+
+</div>
+
+<h1> &nbsp&nbsp&nbsp&nbsp </h1>
+
+<section id="resistors">
+  <h1 style = "font-family:ringBearer">resitors</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="leds">
+  <h1 style = "font-family:ringBearer">leds</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="capacitors">
+  <h1 style = "font-family:ringBearer">capacitors</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="inductors">
+  <h1 style = "font-family:ringBearer">inductors</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="diodes">
+  <h1 style = "font-family:ringBearer">diodes</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="opamp">
+  <h1 style = "font-family:ringBearer">operational amplifier</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="bjt">
+  <h1 style = "font-family:ringBearer">bjt transistor</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="mosfet">
+  <h1 style = "font-family:ringBearer">mosfet transistor</h1>
+  <!-- Your content here -->
+</section>
+
+<section id="tbd">
+  <h1 style = "font-family:ringBearer">tbd</h1>
+  <!-- Your content here -->
+</section>
+
+
+<script>
+function filterBlocks() {
+  const input = document.getElementById("searchBox").value.toLowerCase();
+  const blocks = document.querySelectorAll(".block-link");
+
+  const shouldShowAll = input.trim() === "";
+
+  blocks.forEach(block => {
+    const text = block.textContent.toLowerCase();
+    const matches = text.includes(input);
+    const shouldShow = shouldShowAll || matches;
+
+    const quote = block.querySelector("blockquote");
+
+    if (shouldShow) {
+      block.style.display = "block";
+
+      // Reset the fade-in animation on blockquote
+      quote.classList.remove("fade-in");
+      void quote.offsetWidth;
+      quote.classList.add("fade-in");
+    } else {
+      block.style.display = "none";
+    }
+  });
+}
+</script>
+
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class = "sidenav-links">
