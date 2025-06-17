@@ -14,6 +14,10 @@
             font-family: 'ringBearer';
             src: url(Ringbearer.ttf) format('truetype');
         }
+        @font-face {
+            font-family: 'Avenir';
+            src: url(Avenir.otf) format('opentype');
+        }
         * {
             margin: 0;
             padding: 0;
@@ -37,16 +41,36 @@
             font-size: 35px;
             animation: fadeIn 5s;
         }
-                .fade-in-text2 {
+        .fade-in-text2 {
             font-size: 18px;
             animation: fadeIn 5s;
         }
+        .fade-in-text3 {
+            font-size: 12px;
+            animation: fadeIn 5s;
+        }
+        .fade-in-text4 {
+            animation: fadeIn 5s;
+        }
         h1 {text-align: center;}
+
         p {text-align: center;}
         @keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
         }
+
+        .border-image {
+        position: absolute;
+        top: -25px;
+        left: -22.75px;
+        width: calc(100% + 48px);  
+        height: calc(100% + 46px); 
+        z-index: 3;
+        pointer-events: none;
+        }
+
+
         .glow {
         font-size: 80px;
         color: #fff;
@@ -179,12 +203,138 @@
 
         :root {
         --space-star-mask: url('star.svg');
+        --gallifrey1: url('gallifrey1.svg');
+        --gallifrey2: url('gallifrey2.svg');
+        --gallifrey3: url('gallifrey3.svg');
+        }
+
+        .image-quote {
+        display: inline-block;
+        position: relative;
+        margin: 1rem;
+        padding: 0.4rem;
+        border-radius: 0.25rem;
+        background: rgba(255, 255, 255, 0.03);
+        width: fit-content;
+        }
+
+
+        .fit-image {
+        width: 350px;  /* or adjust to taste */
+        height: auto;
+        display: block;
+        }
+
+        .image-quote img.fit-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.3rem, 1rem 0);
+        }
+
+        /* Resize border to wrap image tightly */
+        .image-quote::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+          border: solid 2px rgb(229, 214, 157);  /* thinner */
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.3rem, 1rem 0);
+        z-index: -1;
+        }
+
+        .image-quote::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: rgb(229, 214, 157);
+
+        -webkit-mask-image: var(--space-star-mask);
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+
+        mask-image: var(--space-star-mask);
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+
+          transform: translate(-50%, -35%);
+        }
+
+        .image-quote-row {
+        display: flex;
+        justify-content: center;
+        gap: .25rem; /* space between the two */
+        flex-wrap: wrap; /* responsive stacking on smaller screens */
+        }
+
+        p {
+            font-family: Avenir;
+            text-align: center;
+            max-width: 700px; 
+            margin: 1rem auto; 
+            padding: 0 1rem; /* add some horizontal padding */
+        }
+
+                .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        .fade-in {
+          animation: fadeIn 0.8s ease forwards;
+          opacity: 0;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+        #searchBox {
+          background-color: transparent;
+          border: 2px solid rgba(229, 214, 157, 0.6); /* soft gold border */
+          padding: 0.5rem 1rem;
+          font-family: "ringBearer", serif;
+          font-size: 1.1rem;
+          color: white;
+          border-radius: 0.25rem;
+          width: 100%;
+          max-width: 400px;
+          margin: 1rem auto;
+          display: block;
+          outline: none;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #searchBox::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+          font-family: "ringBearer", serif;
+        }
+
+        #searchBox:focus {
+          border-color: rgb(229, 214, 157);
+          box-shadow: 0 0 5px rgba(229, 214, 157, 0.7);
         }
 
     </style>
-    <title>MotionShield</title>
+    <title>contactus</title>
   </head>
 
+<body>
 <span style="font-size:30px;cursor:pointer;padding: 15px;" onclick="toggleNav()">&#9776;</span>
 
   <div class="imgbox">
@@ -192,33 +342,26 @@
 </div>
 
 <div class="fade-in-text">
-  <h1 class = "glow" style = "font-family:ringBearer"> motion shield </h1>
+  <h1 class = "glow" style = "font-family:ringBearer"> contact us! </h1>
 </div>
 
 <hr style = "width: 750px; margin: auto;"/>
 
 <h1> &nbsp&nbsp&nbsp&nbsp </h1>
 
-<div class="fade-in-text2">
-<h1 style = "font-family:ringBearer"> getting started </h1>
+<div class = "fade-in-text4">
+<p>
+    
+</p>
 </div>
 
-<blockquote>
-
-<div class = "imgbox">
-
-    <img class = "center-fit" src = "devboardpinout.png">
-
-</div>
-
-
-</blockquote>
+<h1> &nbsp&nbsp&nbsp&nbsp </h1>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class = "sidenav-links">
   <a style = "font-family:ringBearer" href="index.html">home</a>
-  <a style = "font-family:ringBearer" href="contactPage.html">contact us</a>
+  <a style = "font-family:ringBearer" href="#">contact us</a>
   </div>
 </div>
 
@@ -247,5 +390,7 @@
         }
     }
 </script>
+
+</body>
 
 </html> 
