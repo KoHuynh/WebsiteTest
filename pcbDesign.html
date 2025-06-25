@@ -966,11 +966,11 @@
 
 <div class = "fade-in-text4">
 <p>
-    Now, <b><u>in the search box of the Footprint Chooser window, type in "LED_0201_0603Metric" and select the footprint named 
-      "LED_0201_0603Metric" by left clicking twice. The footprint should now appear back in your textbox in the "Symbol Properties"
+    Now, <b><u>in the search box of the Footprint Chooser window, type in "LED_D3.0mm" and select the footprint named 
+      "LED_D3.0mm" by left clicking twice. The footprint should now appear back in your textbox in the "Symbol Properties"
       window. After it appears, click "Ok" in the bottom right of this window to save the change.
     </u></b> 
-    This is a commonly used surface-mounted-device (SMD) LED used on PCBs!
+    This is a commonly used through-hole technology (THT) LED used for soldering on LEDs to PCBs!
     See the images below for a reference.
 </p>
 </div>
@@ -998,11 +998,13 @@
     Navigate over to where it says "Footprint" and click on the blank box next to it, so that an icon with 2 vertical bars and 1 slanted bar appears 
     at the very right end of the text box. Click on this icon so that a new window pops up, titled "Footprint Chooser". 
     
-    <b><u>In the search box of the Footprint Chooser window, type in "R_0201_0603" and select the footprint named 
-      "R_0201_0603" by left clicking twice. The footprint should now appear back in your textbox in the "Symbol Properties"
+    <b><u>In the search box of the Footprint Chooser window, type in "R_Axial Horizontal" and you'll see a bunch of resistor footprints!
+      Feel free to choose any of these footprints by left clicking twice, as the differences between each are representative of how long the legs are for 
+      each resistor, or the size of it. For reference, I selected "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" 
+      if you would like to copy me. The footprint should now appear back in your textbox in the "Symbol Properties"
       window. After it appears, click "Ok" in the bottom right of this window to save the change.
     </u></b> 
-    This is a commonly used surface-mounted-device (SMD) resistor used on PCBs!
+    This is a commonly used through-hole technology (TFT) resistor footprint used on PCBs!
     See the images below for a reference.
 </p>
 </div>
@@ -1071,14 +1073,328 @@
   </blockquote>
 </div>
 
+<div class = "fade-in-text4">
+<p>
+    You'll have a new window pop-up that looks like this!
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad35.png" alt="kiCad35" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    <b><u>At the top of your PCB editor window, where the list of all the icons is, click on the half-green, half-beige icon, with a red arrow. 
+      Alternatively, the keyboard shortcut for this is "F8", if you would like to press that on your computer keyboard instead. A window 
+      will pop-up titled "Update PCB from Schematic". In the bottom-left of the window, click "Update PCB".
+    </u></b> 
+    See the images below for a reference.
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad36.png" alt="kiCad36" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad37.png" alt="kiCad37" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    If you see no errors/warnings after clicking "Update PCB" <b><u>click "Close" in the bottom right of the window! You'll now find that 
+      a bunch of symbols follow your cursor everywhere you move it.
+    </u></b> 
+    See the images below for a reference.
+</p>
+</div>
+
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad38.png" alt="kiCad38" class="fit-image" />
+  </blockquote>
+</div>
+
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad39.png" alt="kiCad39" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    <b><u>Left-click anywhere on the canvas to place the footprints down. In order to move around our footprints, click the component 
+      so that all of it is highlighted, including the text, and then you will be able to drag it around by hovering the component and holding 
+      left-click. If you want to rotate a footprint, while highlighted, press "R" on your computer keyboard. (the same process as 
+      moving around symbols in the schematic editor window)
+    </u></b> 
+</p>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    <b><u>Since everthing is a little too compact, let's make some space by dragging and rotating everything out a bit!
+    </u></b> 
+    Feel free to copy the layout I have for the footprints.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad40.png" alt="kiCad40" class="fit-image" />
+  </blockquote>
+</div>
+
+
+<div class = "fade-in-text4">
+<p>
+    Now that we have our layout, let's start adding traces to our PCB! Traces are copper pathways embedded into our printed 
+    circuit board, meaning "traces" are like our "wires" we use when making any circuit. 
+    <b><u>To start tracing, hover over a "hole" of a footprint, and then click "X" on your keyboard, or on the right side of the PCB editor window,
+      you'll see a horizontal blue line with two slanted ends icon, which you can click to route a single track.
+    </u></b> 
+    See the image below for a reference of where this icon is located.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad41.png" alt="kiCad41" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    <b><u>Either way, once you click on a "hole" of a footprint, you should see this view, which helps you know how footprints should be connected via
+    tracks! 
+    </u></b> 
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad42.png" alt="kiCad42" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    <b><u>Drag your mouse to the other highlighted end, and then left-click to place the trace!
+    </u></b> See the images below for a reference.
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad43.png" alt="kiCad43" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad44.png" alt="kiCad44" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, let's trace the rest of our circuit<b><u>Click on the other end of our LED that is not connected, so that you are placing another trace.
+      If you want to route a trace in a specific way that the auto-router tool will not allow you, you can click left-click on an empty space to set down 
+      a specific route of a trace! 
+    </u></b> For example, the auto-router tool wanted to put the trace this way when trying to connect the other end of the LED: 
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad45.png" alt="kiCad45" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    But I didn't exactly want this option, since my trace will run into my footprint outline
+     (also known as the silkscreen layer). So, I can click on the other end of the LED, route a trace just slightly above, click left-click (which will 
+     set our trace so far in stone), and then be able to finish the rest of the connection without going straight through my resistor footprint!
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad46.png" alt="kiCad46" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad47.png" alt="kiCad47" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, let's finish tracing our PCB by connecting the other end of the resistor to our header pins, by repeating the previous steps.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad48.png" alt="kiCad48" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Our finished PCB will look like this in the end! Although, if you chose to trace it differently, it may look a little different.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad49.png" alt="kiCad49" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p style = "font-size: 16px">
+    <b><u>Step 7: Edge Cuts + Finishing Touches</u></b>
+</p>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, we've laid out all our PCB traces, let's create the outline for our PCB!<b><u>
+      Navigate over to the right side of the PCB editor window, and click on where it says Edge.Cuts
+    </u></b>.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad50.png" alt="kiCad50" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Then<b><u>
+      click on the filled in gray rectangle icon nearby Edge.Cuts
+    </u></b>.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad51.png" alt="kiCad51" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    What we're going to do now is create the edge cuts for our PCB, which essentially means creating an outline, or how big the PCB 
+    should be (or even what shape). Since we generally want PCBs to be pretty compact, let's create a rectangular outline just big enough to 
+    contain everything with a little gap in between.
+</p>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    To do so, click on where you want the first corner of the rectangle to be, and then drag your mouse to contain all of the footprints.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad52.png" alt="kiCad52" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    If you want to make the edges of the rectangle more rounded, click on the rectangle so that all of it is highlighted, then right-click it, hover over
+    "Shape Modification", then click on "Fillet Lines". A window should pop-up, and choosing a radius of 1mm is fine to round the edges, but 
+    feel free to change this number to your liking!
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad54.png" alt="kiCad54" class="fit-image" />
+  </blockquote>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad53.png" alt="kiCad53" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, our finished PCB looks like this!
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad55.png" alt="kiCad55" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Lastly, let's check our PCB follows all design conventions, by using the DRC tool, or Design Rules Checker. <b><u>
+      Navigate to the top of our PCB editor window, and click the icon that looks like a 3 bullet list with a red checkmark. A pop-up 
+      window appear titled "Design Rules Checker", and click "Run DRC" in the bottom-right. You should have 0 errors pop up!
+    </u></b>
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad56.png" alt="kiCad56" class="fit-image" />
+  </blockquote>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad57.png" alt="kiCad57" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Congratulations! You have now made your first PCB! If you want to see a 3D model of how it looks, navigate to the top of your PCB editor 
+    window, and click the icon with a thick blue horizontal line at the bottom, and a black and gray square on top.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad58.png" alt="kiCad58" class="fit-image" />
+  </blockquote>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad59.png" alt="kiCad59" class="fit-image" />
+  </blockquote>
+</div>
+
 <section id="tut2">
-  <h1 style = "font-family:ringBearer">intermediate tutorial</h1>
+  <div class="fade-in-text2">
+  <h1 style = "font-family:ringBearer"> <b><u>intermediate tutorial</u></b> </h1>
+  </div>
   
   <div class = "fade-in-text4">
   <p style = "font-size: 16px">
       Now that we know the basics, let's get a little more complex! The tutorial below will cover how to make 
         a <b><u> </u></b> which will cover more of the tools of KiCad, <b><u>such as no-connections, power flags, introduction to 
-        new analog components, via holes, and back copper traces.</u></b>
+        new analog components, via holes, back copper traces, and zone fills.</u></b>
+        For now, only a video tutorial of this can be found below. 
   </p>
 </div>
 
@@ -1087,8 +1403,9 @@
 </section>
 
 <section id="tut3">
-  <h1 style = "font-family:ringBearer">advanced tutorial</h1>
-  
+<div class="fade-in-text2">
+<h1 style = "font-family:ringBearer"> <b><u>advanced tutorial</u></b> </h1>
+</div>
   <div class = "fade-in-text4">
   <p style = "font-size: 16px">
       It's time to start talking about making your own DevBoard, like the one found in the Tools For Imagination! 
