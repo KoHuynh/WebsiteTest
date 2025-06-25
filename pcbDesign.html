@@ -926,9 +926,163 @@
 
 <div class = "fade-in-text4">
 <p>
-
+    Now that our circuit is finished, it's time to start choosing the components to make our PCB! Essentially, so far we 
+    only have diagrams of what components that our circuit uses, so now we must match these component diagrams to actual 
+    components in real life. 
 </p>
 </div>
+
+<div class = "fade-in-text4">
+<p>
+    So, to start, <b><u>click on our LED, so that the entirety of it is highlighted in blue. Then click "E" on your computer keyboard. 
+    A window should pop up below titled "Symbol Properties".</u></b> See the image below for a reference of what should be on your screen now.
+</p>
+</div>
+
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad25.png" alt="kiCad25" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, <b><u>navigate over to where it says "Footprint" and click on the blank box next to it, so that an icon with 2 vertical bars and 1 slanted bar appears 
+    at the very right end of the text box. Click on this icon so that a new window pops up, titled "Footprint Chooser".</u></b> 
+    See the images below for a reference.
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad26.png" alt="kiCad26" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad27.png" alt="kiCad27" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, <b><u>in the search box of the Footprint Chooser window, type in "LED_0201_0603Metric" and select the footprint named 
+      "LED_0201_0603Metric" by left clicking twice. The footprint should now appear back in your textbox in the "Symbol Properties"
+      window. After it appears, click "Ok" in the bottom right of this window to save the change.
+    </u></b> 
+    This is a commonly used surface-mounted-device (SMD) LED used on PCBs!
+    See the images below for a reference.
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad28.png" alt="kiCad28" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad29.png" alt="kiCad29" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Now, click on the resistor so that all of it is highlighted in blue, and repeat the previous steps, i.e. <b><u> click "E" on 
+      your computer keyboard so that a window titled "Symbol Properties" pops up.
+    </u></b> 
+</p>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Navigate over to where it says "Footprint" and click on the blank box next to it, so that an icon with 2 vertical bars and 1 slanted bar appears 
+    at the very right end of the text box. Click on this icon so that a new window pops up, titled "Footprint Chooser". 
+    
+    <b><u>In the search box of the Footprint Chooser window, type in "R_0201_0603" and select the footprint named 
+      "R_0201_0603" by left clicking twice. The footprint should now appear back in your textbox in the "Symbol Properties"
+      window. After it appears, click "Ok" in the bottom right of this window to save the change.
+    </u></b> 
+    This is a commonly used surface-mounted-device (SMD) resistor used on PCBs!
+    See the images below for a reference.
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad30.png" alt="kiCad30" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad31.png" alt="kiCad31" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Lastly, click on the 1x2 connector so that all of it is highlighted in blue, and repeat the previous steps, i.e. <b><u> click "E" on 
+      your computer keyboard so that a window titled "Symbol Properties" pops up.
+    </u></b> 
+</p>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    Navigate over to where it says "Footprint" and click on the blank box next to it, so that an icon with 2 vertical bars and 1 slanted bar appears 
+    at the very right end of the text box. Click on this icon so that a new window pops up, titled "Footprint Chooser". 
+    
+    <b><u>In the search box of the Footprint Chooser window, type in "PinSocket_1x02_P2.54mm_Vertical" and select the footprint named 
+      "PinSocket_1x02_P2.54mm_Vertical" by left clicking twice. The footprint should now appear back in your textbox in the "Symbol Properties"
+      window. After it appears, click "Ok" in the bottom right of this window to save the change.
+    </u></b> 
+    This is a commonly used female header pin, that nicely fits the measurements of common wires!
+    See the images below for a reference.
+</p>
+</div>
+
+<div class="image-quote-row">
+  <blockquote class="image-quote">
+    <img src="kiCad32.png" alt="kiCad32" class="fit-image" />
+  </blockquote>
+
+  <blockquote class="image-quote">
+    <img src="kiCad33.png" alt="kiCad33" class="fit-image" />
+  </blockquote>
+</div>
+
+<div class = "fade-in-text4">
+<p style = "font-size: 16px">
+    <b><u>Step 6: Adding traces to the PCB</u></b>
+</p>
+</div>
+
+<div class = "fade-in-text4">
+<p>
+    After choosing all the footprints, let's start making the PCB!
+    
+    <b><u>At the top of your schematic window, where the list of all the icons is, click on the green-most icon, with a yellow hole on each side.
+    </u></b> 
+    See the image below for a reference.
+</p>
+</div>
+
+<div style="text-align: center;">
+  <blockquote class="image-quote">
+    <img src="kiCad34.png" alt="kiCad34" class="fit-image" />
+  </blockquote>
+</div>
+
+<section id="tut2">
+  <h1 style = "font-family:ringBearer">intermediate tutorial</h1>
+  
+  <div class = "fade-in-text4">
+  <p style = "font-size: 16px">
+      Now that we know the basics, let's get a little more complex! The tutorial below will cover how to make 
+        a <b><u> </u></b> which will cover more of the tools of KiCad, <b><u>such as no-connections, power flags, introduction to 
+        new analog components, via holes, and back copper traces.</u></b>
+  </p>
+</div>
+
+</section>
 
 </section>
 
@@ -937,10 +1091,10 @@
   
   <div class = "fade-in-text4">
   <p style = "font-size: 16px">
-      <b><u>It's time to start talking about making your own DevBoard, like the one found in the Tools For Imagination! 
-        The tutorial below will cover how to get started, PCB trace widths, researching and ordering parts, and assembly. 
+      It's time to start talking about making your own DevBoard, like the one found in the Tools For Imagination! 
+        <b><u>The tutorial below will cover how to get started making a DevBoard
+          , PCB trace widths, researching and ordering parts, and assembly.</u></b> 
         For now, only a video tutorial of this can be found below. 
-      </u></b>
   </p>
 </div>
 

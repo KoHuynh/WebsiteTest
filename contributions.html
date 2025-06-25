@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+        body {
+        background-image: url('backgroundimagebetter.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: white
+        }
+        @font-face{
+            font-family: 'ringBearer';
+            src: url(Ringbearer.ttf) format('truetype');
+        }
+        @font-face {
+            font-family: 'Avenir';
+            src: url(Avenir.otf) format('opentype');
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 25%;
+            animation: fadeIn 5s;
+        }
+        .center-fit {
+            max-width: 25%;
+            max-height: 100vh;
+            margin: auto;
+        }
+                /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+        .fade-in-text {
+            font-size: 35px;
+            animation: fadeIn 5s;
+        }
+        .fade-in-text2 {
+            font-size: 18px;
+            animation: fadeIn 5s;
+        }
+        .fade-in-text3 {
+            font-size: 12px;
+            animation: fadeIn 5s;
+        }
+        .fade-in-text4 {
+            animation: fadeIn 5s;
+        }
+        h1 {text-align: center;}
+
+        p {text-align: center;}
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+
+        .border-image {
+        position: absolute;
+        top: -25px;
+        left: -22.75px;
+        width: calc(100% + 48px);  
+        height: calc(100% + 46px); 
+        z-index: 3;
+        pointer-events: none;
+        }
+
+
+        .glow {
+        font-size: 80px;
+        color: #fff;
+        text-align: center;
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #373f57;
+        }
+        .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+        
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+        padding: 8px 8px 8px 21px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+ 
+        .sidenav-links {
+            margin-top: 40px; /* Push links down below the close button */
+        }
+
+        /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+        transition: margin-left .5s;
+        padding: 20px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+        
+        :where(blockquote, div.blockquote) {
+            position: relative;
+            padding: .75rem .75rem .75rem .75rem; 
+            background: white;
+            margin: 1rem auto;
+            font-style: italic;
+            color: #333;
+            border-radius: 0.25rem;
+            z-index: 0;
+        }
+
+        blockquote {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Removed conflicting margin and padding */
+            background: transparent;
+            border: none;
+            max-width: fit-content;
+        }
+
+        /* Border lines with star */
+        :where(blockquote, div.blockquote)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        box-sizing: border-box;
+        z-index: -1;
+
+        border: solid 0.12rem rgb(229, 214, 157);
+
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
+        }
+
+        /* Icon mask positioned top-left */
+        :where(blockquote, div.blockquote)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+
+        background-color: rgb(229, 214, 157);
+
+        -webkit-mask-image: var(--space-star-mask);
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+
+        mask-image: var(--space-star-mask);
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+
+        transform: translate(-50%, -42.5%);
+        }
+
+        :root {
+        --space-star-mask: url('star.svg');
+        --gallifrey1: url('gallifrey1.svg');
+        --gallifrey2: url('gallifrey2.svg');
+        --gallifrey3: url('gallifrey3.svg');
+        }
+
+        .image-quote {
+        display: inline-block;
+        position: relative;
+        margin: 1rem;
+        padding: 0.4rem;
+        border-radius: 0.25rem;
+        background: rgba(255, 255, 255, 0.03);
+        width: fit-content;
+        }
+
+
+        .fit-image {
+        width: 350px;  /* or adjust to taste */
+        height: auto;
+        display: block;
+        }
+
+        .image-quote img.fit-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.3rem, 1rem 0);
+        }
+
+        /* Resize border to wrap image tightly */
+        .image-quote::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+          border: solid 2px rgb(229, 214, 157);  /* thinner */
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.3rem, 1rem 0);
+        z-index: -1;
+        }
+
+        .image-quote::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: rgb(229, 214, 157);
+
+        -webkit-mask-image: var(--space-star-mask);
+        -webkit-mask-size: contain;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+
+        mask-image: var(--space-star-mask);
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+
+          transform: translate(-50%, -35%);
+        }
+
+        .image-quote-row {
+        display: flex;
+        justify-content: center;
+        gap: .25rem; /* space between the two */
+        flex-wrap: wrap; /* responsive stacking on smaller screens */
+        }
+
+        p {
+            font-family: Avenir;
+            text-align: center;
+            max-width: 700px; 
+            margin: 1rem auto; 
+            padding: 0 1rem; /* add some horizontal padding */
+        }
+
+                .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+
+        .fade-in {
+          animation: fadeIn 0.8s ease forwards;
+          opacity: 0;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+        #searchBox {
+          background-color: transparent;
+          border: 2px solid rgba(229, 214, 157, 0.6); /* soft gold border */
+          padding: 0.5rem 1rem;
+          font-family: "ringBearer", serif;
+          font-size: 1.1rem;
+          color: white;
+          border-radius: 0.25rem;
+          width: 100%;
+          max-width: 400px;
+          margin: 1rem auto;
+          display: block;
+          outline: none;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #searchBox::placeholder {
+          color: rgba(255, 255, 255, 0.6);
+          font-family: "ringBearer", serif;
+        }
+
+        #searchBox:focus {
+          border-color: rgb(229, 214, 157);
+          box-shadow: 0 0 5px rgba(229, 214, 157, 0.7);
+        }
+
+    </style>
+    <title>hallOfFame</title>
+  </head>
+
+<body>
+<span style="font-size:30px;cursor:pointer;padding: 15px;" onclick="toggleNav()">&#9776;</span>
+
+  <div class="imgbox">
+    <img class="center-fit" src="envision_banner_logo.png">
+</div>
+
+<div class="fade-in-text">
+  <h1 class = "glow" style = "font-family:ringBearer"> hall of fame </h1>
+</div>
+
+<hr style = "width: 750px; margin: auto;"/>
+
+<h1> &nbsp&nbsp&nbsp&nbsp </h1>
+
+<div class = "fade-in-text4">
+<p>
+    Within recent years, we've had a lot of individuals within the EnVision and electrical engineering community
+     whose contributions should be recognized! This page is here to highlight those individuals with their 
+     accomplishments.
+</p>
+</div>
+
+<h1> &nbsp&nbsp&nbsp&nbsp </h1>
+
+<style>
+
+  
+.block-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: repeat(3, auto);    
+  gap: 0.5rem 1rem;
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+
+.block-link {
+  display: block;
+    overflow: visible;
+  opacity: 0;
+    margin-top: 0.5rem;
+  text-decoration: none;
+  font-family: "ringBearer";
+  color: white;
+  display: block;
+  gap: 1rem 2rem;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+
+
+.block-link:hover {
+  transform: scale(1.03);
+}
+
+.block-link blockquote {
+  opacity: 1;
+  width: 100%;     /* fill parent */
+  max-width: 300px;       /* fixed width for uniformity */
+  height: 130px;       /* fixed height for uniformity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0;
+  font-style: normal;
+  border-radius: 0.25rem;
+  position: relative;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: visible;     /* keep content contained */
+}
+
+.block-link:hover blockquote {
+  border-color: #fff2b5;
+  box-shadow: 0 0 10px rgba(229, 214, 157, 0.6);
+}
+
+.block-link:hover blockquote::after {
+  animation: rotateIcon 3s linear infinite;
+}
+
+.block-link blockquote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: solid 0.12rem rgb(229, 214, 157);
+ clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
+  z-index: -1;
+}
+
+.block-link blockquote::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(229, 214, 157);
+  -webkit-mask-image: var(--gallifrey2);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: var(--gallifrey2);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: translate(-50%, -42.5%);
+}
+
+.block-link blockquote.has-bottom-icon::before {
+  clip-path: polygon(
+    2rem 0, 100% 0, 100% calc(100% - 2rem),
+    calc(100% - 2rem) 100%, 0 100%, 0 2rem, 2rem 2rem
+  );
+}
+
+.corner-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(229, 214, 157);
+
+  -webkit-mask-image: var(--icon-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-image: var(--icon-url);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transform: translate(50%, 50%);
+  transform-origin: center; 
+  z-index: 2;
+}
+
+.block-link:hover .corner-icon {
+  animation: rotateIcon2 3s linear infinite;
+}
+
+@keyframes rotateIcon2 {
+  from {
+    transform: translate(50%, 50%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, 50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: translate(-50%, -42.5%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -42.5%) rotate(360deg);
+  }
+}
+
+</style>
+
+<script>
+function filterBlocks() {
+  const input = document.getElementById("searchBox").value.toLowerCase();
+  const blocks = document.querySelectorAll(".block-link");
+
+  const shouldShowAll = input.trim() === "";
+
+  blocks.forEach(block => {
+    const text = block.textContent.toLowerCase();
+    const matches = text.includes(input);
+    const shouldShow = shouldShowAll || matches;
+
+    const quote = block.querySelector("blockquote");
+
+    if (shouldShow) {
+      block.style.display = "block";
+
+      // Reset the fade-in animation on blockquote
+      quote.classList.remove("fade-in");
+      void quote.offsetWidth;
+      quote.classList.add("fade-in");
+    } else {
+      block.style.display = "none";
+    }
+  });
+}
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class = "sidenav-links">
+  <a style = "font-family:ringBearer" href="index.html">home</a>
+  <a style = "font-family:ringBearer" href="contactPage.html">contact us</a>
+  </div>
+</div>
+
+<script>
+    
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<script>
+    let navOpen = true; // false = initially close d
+
+    function toggleNav() {
+        const sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.width === "0px" || sidenav.style.width === "") {
+            sidenav.style.width = "200px";
+            navOpen = true;
+        } else {
+            sidenav.style.width = "0px";
+            navOpen = false;
+        }
+    }
+</script>
+
+</body>
+
+</html> 
